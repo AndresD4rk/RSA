@@ -75,38 +75,38 @@ root = tk.Tk()
 root.title("Cifrado y Descifrado RSA")
 
 # Configuración del estilo
-root.geometry("400x300")  # Tamaño de la ventana
+root.geometry("800x600")  # Tamaño de la ventana
 root.configure(bg="#8b00c5")  # Color de fondo
 
 # Título
-title_label = tk.Label(root, text="Cifrado y Descifrado RSA", font=("Arial", 16), bg="#8b00c5", fg="white")
-title_label.pack(pady=10)
+title_label = tk.Label(root, text="Cifrado y Descifrado RSA", font=("Arial", 24), bg="#8b00c5", fg="white")
+title_label.pack(pady=30)
 
 # Etiqueta y campo de entrada para el mensaje
-message_label = tk.Label(root, text="Mensaje a cifrar:", font=("Arial", 12), bg="#8b00c5", fg="white")
+message_label = tk.Label(root, text="Mensaje a cifrar:", font=("Arial", 18), bg="#8b00c5", fg="white")
 message_label.pack()
-entry = tk.Entry(root, font=("Arial", 12), width=30)
+entry = tk.Entry(root, font=("Arial", 18), width=45)
 entry.pack(pady=10)
 
 # Botón para encriptar el mensaje
-encrypt_button = tk.Button(root, text="Encriptar", font=("Arial", 12), bg="#8b00c5", fg="white", command=encrypt_message)
-encrypt_button.pack()
+encrypt_button = tk.Button(root, text="Encriptar", font=("Arial", 18), bg="#8b00c5", fg="white", command=encrypt_message)
+encrypt_button.pack(pady=10)
 
 # Etiqueta para mostrar el mensaje cifrado
-ciphertext_label = tk.Label(root, text="Mensaje cifrado:", font=("Arial", 12), bg="#8b00c5", fg="white")
-ciphertext_label.pack()
-ciphertext_data = tk.Label(root, text="", font=("Arial", 12), bg="#8b00c5", fg="white")
-ciphertext_data.pack()
+ciphertext_label = tk.Label(root, text="Mensaje cifrado:", font=("Arial", 18), bg="#8b00c5", fg="white")
+ciphertext_label.pack(pady=10)
+ciphertext_data = tk.Label(root, text="", font=("Arial", 18), bg="#8b00c5", fg="white")
+ciphertext_data.pack(pady=10)
 
 # Botón para desencriptar el mensaje
-decrypt_button = tk.Button(root, text="Desencriptar", font=("Arial", 12), bg="#8b00c5", fg="white", command=decrypt_message)
-decrypt_button.pack()
+decrypt_button = tk.Button(root, text="Desencriptar", font=("Arial", 18), bg="#8b00c5", fg="white", command=decrypt_message)
+decrypt_button.pack(pady=10)
 
 # Etiqueta para mostrar el mensaje descifrado
-decrypted_label = tk.Label(root, text="Mensaje descifrado:", font=("Arial", 12), bg="#8b00c5", fg="white")
-decrypted_label.pack()
-decrypted_data = tk.Label(root, text="", font=("Arial", 12), bg="#8b00c5", fg="white")
-decrypted_data.pack()
+decrypted_label = tk.Label(root, text="Mensaje descifrado:", font=("Arial", 18), bg="#8b00c5", fg="white")
+decrypted_label.pack(pady=10)
+decrypted_data = tk.Label(root, text="", font=("Arial", 18), bg="#8b00c5", fg="white")
+decrypted_data.pack(pady=10)
 
 # Generar claves RSA
 public_key, private_key = generate_rsa_keys()
